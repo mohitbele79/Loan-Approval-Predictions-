@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="toggleSidebar()">&#9776;</button>
+        <div class="navbar-title">Loan Approval Prediction</div>
+    </div>
+
+    <div class="sidebar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('single_prediction') }}">Single Prediction</a>
+        <a href="{{ url_for('batch_prediction') }}">Batch Prediction</a>
+        
+    </div>
+
+    <div class="main-content">
+        {% block content %} <!-- Content placeholder -->
+        {% endblock %}
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
+</html>

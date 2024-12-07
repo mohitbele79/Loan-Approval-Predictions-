@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="image" href="templates\image\mohit_bele.jpg">
+</head>
+
+
+
+<!-- Main container for the home page -->
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Loan Approval Prediction</h1>
+            <p>Predict whether a loan application will be approved or denied using machine learning.</p>
+            <a href="{{ url_for('single_prediction') }}" class="cta-button">Try Prediction</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <h3>Accuracy</h3>
+                <p>Our model is trained to provide highly accurate loan approval predictions based on various factors.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy to Use</h3>
+                <p>The application is simple and user-friendly, allowing you to quickly input details and get results.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-time Prediction</h3>
+                <p>Instant loan prediction results based on your inputs, with easy-to-understand feedback.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Project Section -->
+    <section class="about-section">
+        <h2>About the Loan Prediction Project</h2>
+        <p>This project uses a machine learning model to predict loan approval based on various factors such as income, credit score, loan amount, and more.</p>
+        <p>Built with Flask, this web app makes it easy to predict loan approval in real-time.</p>
+    </section>
+
+    <!-- Developer Information Section -->
+<!-- Developer and Guidance Information Section -->
+<section class="testimonials-section">
+    <h2>Meet the Developer</h2>
+    <div class="testimonials-container">
+        <!-- Developer Mohit Bele -->
+        <div class="testimonial-card">
+            <img src="C:\Users\mohit\Desktop\Naresh_IT\Full_Stack_Data_Science\Projects\Loan Approvel Prediction\Flask app\templates\image\mohit_bele.jpg" alt="Mohit Bele" class="testimonial-img">
+            <!-- <p>"This project has been an incredible journey, allowing me to apply my skills in machine learning and web development to create a predictive system for loan approval. It was amazing to see the project come together and deliver value to the users."</p> -->
+            <span>- Mohit Bele, Developer</span>
+            <a href="https://www.linkedin.com/in/mohit-bele-4886b0236/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BRqhJGHfaTAyKVFYtzX%2B6dQ%3D%3D" target="_blank" class="linkedin-link">View LinkedIn Profile</a>
+        </div>
+        
+        
+    </div>
+</section>
+</div>
+
+
+{% endblock %}

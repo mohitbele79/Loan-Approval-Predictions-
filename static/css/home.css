@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F6F7; /* Light Background */
+    color: #375E97; /* Primary Blue for text */
+}
+
+h1, h2, h3 {
+    color: #375E97; /* Deep Blue for headings */
+}
+
+p {
+    color: #34495E; /* Dark Grayish Blue */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(135deg, #375E97, #FB6542); /* Blue to Vibrant Orange Gradient */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #FB6542; /* Vibrant Orange */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFBB00; /* Bright Yellow Hover */
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 60px 20px;
+    background-color: #F9F9F9; /* Light Grayish Background */
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #375E97; /* Deep Blue */
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #ffffff; /* White Background */
+    color: #375E97; /* Deep Blue Text */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 15px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #FB6542; /* Vibrant Orange */
+}
+
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 60px 20px;
+    background-color: #F4F6F7; /* Light Background */
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #375E97; /* Deep Blue */
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+    background-color: #375E97; /* Deep Blue */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #FB6542; /* Vibrant Orange */
+    color: #FFFFFF; /* White Text */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 15px;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-card span {
+    display: block;
+    font-size: 18px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #FFBB00; /* Bright Yellow */
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #FFBB00; /* Bright Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #FFFFFF; /* White Hover Effect */
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-container,
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card,
+    .testimonial-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

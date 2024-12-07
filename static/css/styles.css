@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Take up full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.navbar {
+    background-color: #375E97; /* Deep Blue */
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0; /* Keep the navbar at the top */
+    width: 100%;
+    z-index: 1000; /* To keep the navbar above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar-toggle {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 60px; /* Start sidebar below the navbar */
+    left: -250px; /* Initially hidden */
+    background-color: #FB6542; /* Vibrant Orange */
+    padding-top: 5px;
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 999; /* Sidebar below the navbar */
+}
+
+.sidebar a, .sidebar button {
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background: none;
+    border: none;
+    display: block;
+    width: 90%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidebar a:hover, .sidebar button:hover {
+    background-color: #FFBB00; /* Bright Yellow on Hover */
+}
+
+.sidebar .submenu {
+    display: none; /* Hidden by default */
+    background-color: #333;
+    margin-left: 20px;
+}
+
+.sidebar .submenu a {
+    font-size: 16px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    padding: 0;
+    transition: margin-left 0.3s ease; /* Smooth transition */
+    flex: 1; /* Allow main content to expand */
+    padding-top: 60px; /* Adjusted for navbar height */
+    padding-bottom: 60px; /* Make space for footer */
+    box-sizing: border-box;
+}
+
+/* Active sidebar (visible) */
+.sidebar.open {
+    left: 0;
+}
+
+.main-content.open {
+    margin-left: 250px; /* Adjusted for sidebar width */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #375E97; /* Deep Blue */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* To keep the footer above other content */
+    box-sizing: border-box;
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+.footer a {
+    color: #FFBB00; /* Bright Yellow for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure that footer stays at bottom when content is less than viewport */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar behavior */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Prevent horizontal overflow */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}

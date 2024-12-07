@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<head>
+   
+    <title>Batch Prediction</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/batch.css') }}">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Batch Prediction</h2>
+        
+        <!-- File Upload Form -->
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Upload CSV File:</label>
+                <input type="file" name="file" id="file" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        
+        <!-- Display Uploaded File Preview -->
+        {% if preview %}
+        <div class="table-container">
+            <h4>Uploaded File Preview:</h4>
+            <div>{{ preview | safe }}</div>
+        </div>
+        {% endif %}
+        
+        <!-- Display Processed Data Preview -->
+        {% if processed_preview %}
+        <div class="table-container">
+            <h4>Processed Data Preview:</h4>
+            <div>{{ processed_preview | safe }}</div>
+        </div>
+        {% endif %}
+        
+        <!-- Display Prediction Results -->
+        {% if tables %}
+        <div class="mt-4">
+            <h4>Prediction Results:</h4>
+            {% for table in tables %}
+            <div>{{ table | safe }}</div>
+            {% endfor %}
+        </div>
+        {% elif result %}
+        <div class="mt-4 text-danger">
+            <strong>{{ result }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+
+
+
+
+
+{% endblock %}
