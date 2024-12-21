@@ -14,10 +14,9 @@ app = Flask(__name__)
 
 
 
-with open(r"C:\Users\mohit\Desktop\Naresh_IT\Full_Stack_Data_Science\Projects\loan2\loan_app\mlmodels\log_model_with_para.pkl", "rb") as file:
+with open("log_model_with_para.pkl", "rb") as file:
     model = pickle.load(file)
-#file=open(r"C:\Users\mohit\Desktop\Naresh_IT\Full_Stack_Data_Science\Projects\loan2\loan_app\mlmodels\log_model_with_para.pkl", "rb")
-#model = pickle.load(file)
+
 
 def single_preprocess(input_data):
     if isinstance(input_data, dict):
